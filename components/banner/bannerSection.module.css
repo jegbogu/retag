@@ -1,0 +1,8 @@
+.section{
+    display: flex;
+    justify-content: space-between;
+    background-image: url("../../public/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+}

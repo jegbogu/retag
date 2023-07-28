@@ -1,0 +1,14 @@
+.btn button{
+    padding: 20px 70px;
+    background-color: var(--p-col);
+    border: none;
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+    font-weight: bold;
+}
+.btn button:hover{
+    background-color: var(--s-col);
+    color: var(--p-col);
+    transition: 300ms;
+}
