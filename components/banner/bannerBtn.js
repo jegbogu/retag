@@ -1,8 +1,8 @@
 import classes from './bannerBtn.module.css'
-function BannerBtn(){
+function BannerBtn(props){
     return(
         <div className={classes.btn}>
-            <button>Learn More</button>
+            <button>{props.btn}</button>
         </div>
     )
 }

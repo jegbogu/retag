@@ -1,0 +1,97 @@
+.section{
+    background-color: #ffffff;
+    padding: 100px;
+    
+    
+    }
+    .section h2{
+        text-align: center;
+    }
+     
+     
+    .form {
+        padding: 20px 20px 0px 20px;
+        box-shadow: 2px 2px 3px gainsboro;
+        border: solid rgb(123, 121, 121) 1px;
+        width: 100%;
+        border-radius: 10px;
+      }
+      
+      .control {
+        margin-bottom: 0.5rem;
+      }
+      
+      .control label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+      
+      .control input,
+      .control select {
+        display: block;
+        font: inherit;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        padding: 0.25rem;
+        width: 100%;
+      }
+       
+      
+      .action button {
+        font: inherit;
+        cursor: pointer;
+        background-color: #77002e;
+        color: white;
+        border: 1px solid #77002e;
+        margin-top:  50px;
+        margin-bottom:  50px;
+        border-radius: 4px;
+        font-weight: bold;
+        padding: 20px;
+        width: 100%;
+      }
+      
+      .action button:hover,
+      .action button:active {
+        background-color: hsl(337, 84%, 35%);
+        border-color: #a50e48;
+      }
+      
+      .control span button {
+        font: inherit;
+        cursor: pointer;
+        background-color: #fff9fb;
+        color: rgb(0, 0, 0);
+        border: 1px solid #77002e;
+        border-radius: 4px;
+        font-weight: bold;
+        width: 10%;
+        margin-top: 10px;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      .red{
+        color: red;
+        font-size: 1.2em;
+        
+      }
+      .green{
+        color: rgb(65, 185, 18);
+      
+      }
+
+      .codePhone{
+        display: flex;
+        width: 100%;
+        
+      }
+      .code{
+        width: 10%;
+      }
+      .phone{
+        width: 88%;
+        margin-left: 2%;
+      }

@@ -10,8 +10,8 @@ function BannerSection(){
         <div className={classes.section}>
             <div className={classes.sectionOne}>
             <BannerHeader/>
-            <BannerPara/>
-            <BannerBtn/>
+            <BannerPara />
+            <BannerBtn btn='Learn More'/>
             </div>
             <div className={classes.sectionTwo}>
                 <BannerImg/>
