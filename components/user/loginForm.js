@@ -47,19 +47,34 @@ function LoginForm() {
 
 
 
-    //     const response = await fetch('api/user/submitForm',{
-    //         method : 'POST',
-    //         body: JSON.stringify(data),
-    //         headers:{
-    //             'Content-Type':'application/json'
-    //         }
-    //     })
-    //  const userData =  await response.json()
-    //  if(!response.ok){
-    //     throw new Error('something went wromg' || userData.message)
-    //  }
+         const handleSign = async ()=>{
+            try {
+                const result  = await signIn("credentials",{
+                    username: enteredEmail,
+                    password: enteredPassword,
+                    role:'user',
+                    redirect: false,
+                   
+                }) 
+                if(!result.ok){
+                    throw new Error('Invalid Username or Password')
+                }else{
+                    router.push('/dashboard')
+                }
+             
 
-    //  router.push('/login')
+            } catch (error) {
+                
+                setEmailErr(error.message)
+                setIsLoding('')
+                SetSpinner('')
+                setPassErr('')
+                return;
+            }
+        }
+        
+        
+        handleSign()
      
 
     }
