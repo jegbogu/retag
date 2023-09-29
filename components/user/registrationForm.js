@@ -86,10 +86,14 @@ function getCity(e){
             }
         })
         const userMsg = await response.json()
-        if(userMsg.message==='Password is too short')
-        setPassErr(userMsg.message)
-        console.log(userMsg)
+       if(response.ok){
         router.push('/login')
+       }else{
+        setPassErr(userMsg.message)
+        
+       }
+        
+       
 
     
     }
@@ -126,7 +130,7 @@ function getCity(e){
                 </div>
                 <div className={classes.control}>
                     <label htmlFor='password'>Password</label>
-                        {passErr}
+                        <h2 style={{color:"red"}}>{passErr}</h2>
                     <div>
                         <input
                             type={show ? 'text' : 'password'}
