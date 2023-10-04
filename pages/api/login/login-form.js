@@ -7,11 +7,11 @@ async function handler(req,res){
         if(req.method==='POST'){
             const{email,password,role} = req.body
             console.log({email,password,role})
-            const founduser = await User.findOne({email:email})
-            console.log(founduser)
-         const user =   await bcrypt.compare(password,founduser.password)
-         if(user){
-            res.status(200).json({message:'login successfully'})
+            const user = await User.findOne({email:email})
+            console.log(user)
+         const founduser =   await bcrypt.compare(password,user.password)
+         if(founduser){
+            res.status(200).json(user)
          }else{
             res.status(403).json({message:'forbidden'})
          }
