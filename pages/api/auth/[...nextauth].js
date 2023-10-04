@@ -19,10 +19,10 @@ export const authOptions = {
       },
       async authorize(credentials, req) {
         try {
-          const { username, password, role } = credentials
+          const { email, password, role } = credentials
           const response = await fetch('http://localhost:3000/api/login/login-form', {
             method: 'POST',
-            body: JSON.stringify({ username, password, role}),
+            body: JSON.stringify({email, password, role}),
             headers: {
               'Content-type': 'application/json'
             },

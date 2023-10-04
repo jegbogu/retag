@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react'
 import classes from './registrationForm.module.css'
 import { useRouter } from 'next/router'
+import { signIn } from "next-auth/react";
 
 
 function LoginForm() {
@@ -50,7 +51,7 @@ function LoginForm() {
          const handleSign = async ()=>{
             try {
                 const result  = await signIn("credentials",{
-                    username: enteredEmail,
+                    email: enteredEmail,
                     password: enteredPassword,
                     role:'user',
                     redirect: false,
@@ -66,8 +67,7 @@ function LoginForm() {
             } catch (error) {
                 
                 setEmailErr(error.message)
-                setIsLoding('')
-                SetSpinner('')
+                 
                 setPassErr('')
                 return;
             }
