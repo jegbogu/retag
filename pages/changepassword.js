@@ -19,7 +19,7 @@ const ChangePasswordForm = () => {
 
     async function submitHandler(event) {
         event.preventDefault()
-        const enteredEmail = session.user.username
+        const enteredEmail = session.user.email
         const enteredPassword = passwordInputRef.current.value;
         const enterednewPassword = newPassportInputRef.current.value;
 
@@ -32,7 +32,7 @@ const ChangePasswordForm = () => {
 
         const response = await fetch('api/changePass/password', {
             method: 'POST',
-            body: JSON.stringify({ enteredEmail, enteredPassword, enterednewPassword }),
+            body: JSON.stringify({ enteredEmail, enteredPassword }),
             headers: {
                 'Content-type': 'application/json'
             },
